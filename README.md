@@ -1,5 +1,5 @@
 Angular dependencies:
-
+<br>
 @primeng - 9.1.0
 @primeicons - 4.0.0
 
