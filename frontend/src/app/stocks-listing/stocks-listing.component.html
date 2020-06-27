@@ -1,0 +1,24 @@
+<h4>STOCKS!</h4>
+
+<p-button id="getbtn" label="GET COMPANIES" (click)="list()"></p-button>
+
+<hr />
+<p-table [value]="stocks" [paginator]="true" [rows]="100"
+totalRecords="totalRecords" pageLinks="3">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>Stock Date</th>
+            <th>Stocks Price</th>
+            <th>Company Name</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-dados>
+        <tr>
+            <td>{{dados.id}}</td>
+            <td>{{dados.priceDate | date:'short' }}</td>
+            <td>{{dados.price}}</td>
+            <td>{{dados.company.name}}</td>
+        </tr>
+    </ng-template>
+</p-table>
